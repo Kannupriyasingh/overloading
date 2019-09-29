@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+void show(int i) {
+cout << " Here is int " << i << endl;
+}
+void show(double f) {
+cout << " Here is float " << f << endl;
+}
+void show(char const *c) {
+cout << " Here is char* " << c << endl;
+}
+void show(float k){
+cout<<" Here is decimal "<< k << endl;
+}
+int main() {
+show(25);
+show(36.41);
+show("ten");
+show(15.5);
+return 0;
+}
