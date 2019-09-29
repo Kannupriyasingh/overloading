@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+class dot
+{
+private:
+	int x, y;
+public:
+	dot(int x1, int y1) { x = x1; y = y1; }
+    // Copy constructor
+	dot(const dot &d2) {x = d2.x; y = d2.y; }
+
+	int getX()		 { return x; }
+	int getY()		 { return y; }
+};
+int main()
+{
+	dot d1(10, 15); // Normal constructor is called here
+	dot d2 = d1; // Copy constructor is called here
+
+	// Let us access values assigned by constructors
+	cout << "d1.x = " << d1.getX() << ", d1.y = " << d1.getY();
+	cout << "\nd2.x = " << d2.getX() << ", d2.y = " << d2.getY();
+    return 0;
+}
