@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+class construct
+{
+
+public:
+    float area;
+
+    construct()
+    {
+        area=0;
+    }
+    ~construct()
+    {
+        cout<<"destruction called"<<endl;
+    }
+    construct(int a, int b, int c)
+    { area= a*b*c;
+    }
+    void display()
+
+    {
+        cout<<"area of cube: "<<area<<endl;
+    }
+
+};
+int main()
+{
+    construct c;
+    construct c1(10,10,10);
+
+
+    c.display();
+    c1.display();
+
+    return 1;
+}
